@@ -1,18 +1,17 @@
 #include "main.h"
-
 /**
  * main - Entry point
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 int main(void)
 {
-	char arr[] = "_putchar";
-	int counter;
+	char array[] = "_putchar";
+	int i;
 
-	for (counter = 0; counter < 8; counter++)
+	for (i = 0; i < 8; i++)
 	{
-		_putchar(arr[counter]);
+		_putchar(array[i]);
 	}
 	_putchar('\n');
 	return (0);
