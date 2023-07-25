@@ -1,0 +1,25 @@
+#include "main.h"
+#include <string.h>
+#include <stdio.h>
+/**
+ * *_strcpy - to copy strings
+ *
+ * @dest: destination
+ *
+ * @src: source
+ *
+ * Return: Always 1 or 0
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int len = strlen(src) - 1;
+	int i;
+
+	for (i = 0; i <= len; i++)
+	{
+		dest[i] = src[i];
+	}
+	printf("\n");
+	return (dest);
+
+}
