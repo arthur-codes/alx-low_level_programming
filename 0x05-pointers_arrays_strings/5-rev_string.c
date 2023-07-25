@@ -10,12 +10,14 @@
  */
 void rev_string(char *s)
 {
-	int i;
+	int i, j;
 	int len = strlen(s);
+	char temp;
 
-	for (i = len - 1; i >= 0; i--)
+	for (i = 0, j = len -1; i < j ; i++, j--)
 	{
-		printf("%c", s[i]);
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
 	}
-	printf("\n");
 }
