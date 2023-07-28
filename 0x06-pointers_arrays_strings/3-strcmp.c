@@ -13,12 +13,13 @@ int _strcmp(char *s1, char *s2)
 {
 	int len = strlen(s1);
 	int len2 = strlen(s2);
-	int result = len - len2;
+	int result;
+	int i;
 
-		if (len == len2)
-			return (0);
-		else if (len < len2)
-			return (result);
-		else
-			return (result);
+	for (i = 0; i < len && s2[i] != '\0' && s1[i] != '\0'; i++)
+	{
+		if (s1[i] != s2[i])
+			result = len - len2;
+	}
+	return (result);
 }
