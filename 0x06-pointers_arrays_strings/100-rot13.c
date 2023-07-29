@@ -10,10 +10,8 @@
 char *rot13(char *c)
 {
 	int i, j, k;
-	char first_characters[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMn
-				   "NoOpPqQrRsStTuUvVwWxXyYzZ";
-	char second_characters[] = "nNoOpPqQrRsStTuUvVwWxXyYzZ
-				    "aAbBcCdDeEfFgGhHiIjJkKlLmM";
+	char first_characters[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char second_characters[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
 
 	i = 0;
 	while (c[i] != '\0')
