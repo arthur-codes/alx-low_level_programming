@@ -4,28 +4,20 @@
  *
  * @n: parameter
  *
- * @start: parameter
- *
- * @end: parameter
+ * @check: parameter
  *
  * Return: Always 0 or 1
  */
-int _sqrt_recursion_calculate(int n, int start, int end)
+int _sqrt_recursion_calculate(int n, int check)
 {
-	int mid;
 	int square;
 
-	if (start > end)
-		return (-1);
-	mid = (start + end) / 2;
-	square = mid * mid;
-
+	square = check * check;
 	if (square == n)
-		return (mid);
-	else if (square < n)
-		return (_sqrt_recursion_calculate(n, mid + 1, end));
-	else
-		return (_sqrt_recursion_calculate(n, start, mid - 1));
+		return (check);
+	else if (square > n)
+		return (-1);
+	return (_sqrt_recursion_calculate(n, check + 1));
 }
 
 /**
@@ -39,6 +31,6 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (_sqrt_recursion_calculate(n, 0, n));
+	return (_sqrt_recursion_calculate(n, 0));
 }
 
